@@ -26,6 +26,13 @@ if __name__ == "__main__":
         process1.release_critical_section() # manually release critical section
         process2.release_critical_section() # manually release critical section
         process0.release_critical_section() # manually release critical section
+        
+        # release one more time to check that no process is in the critical section
+        
+        process0.release_critical_section() # manually release critical section
+        process1.release_critical_section() # manually release critical section
+        process2.release_critical_section() # manually release critical section
+
         print("ending test of lamport mutex algo")
         
     except Exception as e:

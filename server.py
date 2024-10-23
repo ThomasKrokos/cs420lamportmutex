@@ -33,7 +33,7 @@ class Process(object):
             self.replies_received = []
             self.receive_release(self.pid)
         else:
-            print(f"Process{self.pid} does not have access to the critical section\n")
+            print(f"process{self.pid} does not have access to the critical section, unable to give it up\n")
 
     def receive_request(self, clock, request_pid):
         # Update the logical clock and add the request to the queue
