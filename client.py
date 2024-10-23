@@ -14,6 +14,7 @@ if __name__ == "__main__":
     print(mutexmanager)
 
     try:
+        print("testing lamport mutex algo...")
         process0.set_mutex_manager(mutexmanager)
         process1.set_mutex_manager(mutexmanager)
         process2.set_mutex_manager(mutexmanager)
@@ -25,6 +26,7 @@ if __name__ == "__main__":
         process1.release_critical_section() # manually release critical section
         process2.release_critical_section() # manually release critical section
         process0.release_critical_section() # manually release critical section
+        print("ending test of lamport mutex algo")
         
     except Exception as e:
         print(f"error: {e}")
